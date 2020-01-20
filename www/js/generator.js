@@ -5,13 +5,14 @@ var arr5 = ['!', '@', '#', '$'];
 
 document.getElementById('param-1').oninput = function () {
     // ползунок - длина массива
-    document.getElementById('password-length').innerHTML = this.value;
-    
+    document.getElementById('password-length').innerHTML = this.value;    
 }
 generatePass(); // запуск при старте
+
 document.querySelectorAll('.generate_pass').forEach(function (){
     this.oninput = generatePass;  // онлайн при изменении собітия на инпут
 })
+
 document.getElementById('generator').onclick = generatePass;
 
 function generatePass() {
